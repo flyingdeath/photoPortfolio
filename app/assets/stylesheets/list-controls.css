@@ -1,0 +1,211 @@
+.predictedContainer{
+    width:107px;
+}
+  .ratingBtnPredicted{
+    height:19px;
+    background-image:url(rating_star_Predicted.png);
+  }
+  
+  .ratingBtnRated,
+  .ratingBtn,
+  .ratingBtnUnrated{
+    width:19px;
+    height:19px;
+    display:inline-block;
+  }
+  
+  .not_interested{
+    display:none;
+  }
+  
+  .ratingBtnUnrated{
+    background-image:url(rating_dot.png);
+    display:none;
+  
+  }
+  .ratingBtnRated{
+    background-image:url(/rating_star.png);
+  }
+  
+  div.ratingBtn:hover{
+    background-image:url(rating_dot.png);
+  }
+  
+  .getAllIcon{
+    background-image:url(rating_dot.png);
+    width:19px;
+    height:19px;
+    position: absolute;
+    right: 92px;
+    top: 4px;
+  }
+  
+  .ratingSave{
+    display:none;
+  }
+  
+  .ratingSaving{
+    display:Block;
+  }
+  
+  
+  .ratingBtns{
+    padding-top:10px;
+  }
+  
+  .flimItemControlsContainer{
+    position:relative;
+    clear: both;
+  }
+
+  .flimItemControls{   
+  
+    display: none;
+    position: absolute;   
+    min-width: 150px;
+    padding: 10px;
+    z-index:1;
+  }
+
+  li.flimItem:hover .flimItemControls{
+    display:inline-block;
+  }
+  
+  
+  
+  div.ratingBtns:hover .not_interested,
+  div.ratingBtns:hover .ratingBtnUnrated{
+    display:inline-block;
+  }
+  
+  div.ratingBtns:hover .ratingBtnPredicted{
+    display:none;
+  }
+
+
+
+
+
+
+
+  a.peopleLink:link {
+    color:#FFF;
+    margin-left:3px;
+  }    
+  a.peopleLink:visited {
+    color:#FFF;
+  } 
+  a.peopleLink:hover {
+    color:#CCC;
+  } 
+  a.peopleLink:active {
+    color:#FFF;
+  }  
+  
+  a.epsLink:link {
+    color:#FFF;
+    margin-left:3px;
+  }    
+  a.epsLink:visited {
+    color:#FFF;
+  } 
+  a.epsLink:hover {
+    color:#CCC;
+  } 
+  a.epsLink:active {
+    color:#FFF;
+  }  
+  
+  .control-btn{
+    display:inline-block;
+    background-repeat:no-repeat;
+  }
+  
+  
+  .control-btn .play{
+    background-image:url(icons.png);
+    background-position: -19px -64px;
+    width:20px;
+    height:20px;
+  }
+  .control-btn .add_instant_queue{
+    background-image:url(icons.png);
+    background-position: 0px -133px;
+    width:20px;
+    height:20px;
+  }
+  .control-btn .save_disc_queue{
+    background-image:url(icons.png);
+    background-position: 0px -21px;
+    width:20px;
+    height:20px;
+  }
+  .control-btn .add_disc_queue{
+    background-image:url(icons.png);
+    background-position: -19px -133px;
+    width:20px;
+    height:20px;
+  }
+  .control-btn .delete{
+    background-image:url(icons.png);
+    background-position: -19px -153px;
+    width:20px;
+    height:20px;
+  }
+  
+  .control-btn .undoDelete{
+    background-image:url(icons.png);
+    background-position: -19px -177px;
+    width:20px;
+    height:20px;
+  }
+  
+  .control-btn .moveToTop{
+    background-image:url(icons.png);
+    background-position: 0px -177px;
+    width:20px;
+    height:20px;
+  }
+  .control-btn .in_disc_queue{
+    background-image:url(icons.png);
+    background-position: -19px -204px;
+    width:20px;
+    height:20px;
+  }
+  .control-btn .in_instant_queue{
+    background-image:url(icons.png);
+    background-position: 0px -204px;
+    width:20px;
+    height:20px;
+  }
+  
+  .control-btn  .not_interested_clear{
+    width:20px;
+    height:20px;
+  }
+  
+  div.control-btn:hover .not_interested_clear,
+  .control-btn .not_interested{
+    background-image:url(icons.png);
+    background-position: -3px -231px;
+    width:20px;
+    height:20px;
+  }
+  
+  .control-btn .no_opinion{
+    background-image:url(icons.png);
+    background-position: 0px 0px;
+    width:20px;
+    height:20px;
+  }
+  
+  .pageMarkerIcon{
+    background-image:url(icons.png);
+    background-position: 0px 0px;
+    width:20px;
+    height:20px;
+    position:relative;
+    top:50%;
+    left:45%;
+  }
+  

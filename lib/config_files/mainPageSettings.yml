@@ -1,0 +1,201 @@
+--- 
+resizeCallBack:
+  eventList: 
+    resize: 
+      param: 
+        instanceObj: args.mv
+        debugOutputId: initialoutput
+        baseUrl: args.mv.clientVarsUpdate
+      func: args.mv.timedUpdateClientViewport
+  refList: 
+    window: mywindow
+initMenuSet:
+  useDefaluts: true
+  elements: args.menus
+  menuId: mainMenu
+  placeHolderId: mainMenu_placeHolder
+  mv: args.mv
+loadContainer:
+  innerHTML: args.loadContainer
+  id: inlineLoadContainer
+  containerId: menuBarItemLoadcontainer
+hoverConnector:  
+  innerSurfix: _innerContainer
+  errorPanel: errorPanel
+  errorDiv: errorDisplay
+  hidedelay: 250
+  loadindClass: loading
+  mainContainerSurfix: Info
+  readyClass: ready
+  thumbClass: BoxArtImage
+  dataContainerClass: ExtendedData
+  delay: 1000
+  dataDelay: 1000
+  autodismissdelay: 500
+  ancestorClassNameList: 
+  - DataPlacementHover
+  - DataPlacementClose
+  loadindIdSurfix: _ExtendedDataLoading
+  toolTipContainer: toolTip_container
+  dataContainerSurfix: _ExtendedData
+  itemClassName: flimItem
+  contianerClassName: flimList
+  mv: this
+  baseUrl: /main_page/getExifData/
+  width: '572'
+  xOffset: 110
+  yOffset: 25
+btns:
+  ratingBtns:
+  - ratingBtnRated
+  - ratingBtn
+  - not_interested_clear
+  - not_interested
+  - ratingBtnUnrated
+  ratingPerfix: _ratingBtn_
+  notInterested: _ratingBtn_
+  itemShow: flimItem
+  queueBtns: 
+    play: 
+      idSurfix: _play
+      funcName: play
+    saveDiscQueue: 
+      idSurfix: _save_disc_queue
+      funcName: saveDisc
+    addDiscQueue: 
+      idSurfix: _add_disc_queue
+      funcName: addDisc
+    deleteTitle: 
+      idSurfix: _delete
+      funcName: deleteItemTitle
+    moveTitle: 
+      idSurfix: _moveToTop
+      funcName: moveTitleToTop
+    addInstantQueue: 
+      idSurfix: _add_instant_queue
+      funcName: addInstant
+    undoDeleteTitle: 
+      idSurfix: _undoDelete
+      alt: _delete
+  itemClassName: flimItem
+  tagSurfix: _tag
+cueVars:
+  simlarsConnectionSet: 
+    ReadyClassName: ready
+    loadingId: loading
+    LoadingClassName: loading
+    id: simlarsPanel_mainView
+  generalConnectionSet: 
+    ReadyClassName: ready
+    loadingId: loading
+    LoadingClassName: loading
+  deleteLabel: \" Delete\"
+  undoLabel: Undo Delete
+  deleteSurfix: _delete
+  titleItemSurfix: _flim
+  changeSimlarsIndex: /flixrmi/title/changeSimlarsIndex/
+  saveDiscbaseUrl: /flixrmi/cue/saveDisc/
+  undoDeletebaseUrl: /flixrmi/cue/undoDeleteTitle/
+  addInstantbaseUrl: /flixrmi/cue/addInstant/
+  deletebaseUrl: /flixrmi/cue/deleteTitle/
+  addDiscbaseUrl: /flixrmi/cue/addDisc/
+  moveTitlebaseUrl: /flixrmi/cue/moveTitle/
+  errorPanel: errorPanel
+  errorDiv: errorDisplay
+ratingVars:
+  percentageClass: _ratingBtn_Percent
+  ratedClass: ratingBtnRated
+  msgOffClass: ratingSave
+  msgOnClass: ratingSaving
+  clearClass: ratingBtn
+  scaleSize: 5
+  unratedClass: ratingBtnUnrated
+  displaySurfix: _ratingNumericDisplay
+  msgSurfix: _ratingText
+  setbaseUrl: /flixrmi/rating/setRating/
+  surfix: _ratingBtn_
+  noInterested: not_interested
+  notInterestedClear: not_interested_clear
+  errorPanel: errorPanel
+  errorDiv: errorDisplay
+titleVars:
+  errorPanel: errorPanel
+  errorDiv: errorDisplay
+  changeSimlarsIndex: /flixrmi/title/changeSimlarsIndex
+  showTitlebaseUrl: /flixrmi/title/showTitle/
+  showPersonbaseUrl: /flixrmi/people/showPerson/
+  showFullSearchUrl: /flixrmi/search/search_start/
+  tagTitleUrl: /main_page/tagTitle
+  searchDomId: searchPanel_mainView
+  filmInfoSurfix: _filmInfoPanel
+  generalConnectionSet: 
+    ReadyClassName: ready
+    loadingId: loading
+    LoadingClassName: loading
+linkVars: 
+  itemClassName: peopleLink
+  searchClassName: fullsearch
+  epsClassName: epsLink
+bulksearchToggle:
+  eventList: 
+    click: 
+      param: 
+        instanceObj: args.mv
+        bulkfieldId: bulksearch
+        singlefieldId: searchfield
+        bulksearchBtn: bulksearchBtn
+      func: args.mv.bulksearchToggle
+  refList: 
+    window: bulksearchControl
+bulksearchBtn:
+  eventList: 
+    click: 
+      param: 
+        instanceObj: args.mv
+        bulkfieldId: bulksearch
+        singlefieldId: searchfield
+        bulksearchBtn: bulksearchBtn
+        mainViewId: bulkSearchPanel_mainView
+        loadingloadingClassName: loading
+        loadingReadyClassName: ready
+        loadingImageId: loading
+        baseUrl: /flixrmi/search/bulksearch
+      func: args.mv.bulksearch
+  refList: 
+    window: bulksearchBtn
+notesOptions:
+  errorPanel: errorPanel
+  errorDiv: errorDisplay
+  entryToggle: noteEntryToggle
+  entrySet: noteInputFieldSet
+  dToggle: doneToggle
+  hideDoneClass: hideDoneItems
+  showDoneClass: showDoneItems
+  viewSurfix: _mainView
+  panel: notePanel
+  listId: noteList
+  checks: doneCheck
+  doneItem: doneItem
+  nonDoneItem: non-doneItem
+  itemPerfix: noteitem_
+  deletePrefix: noteDelete_
+  submit: noteSubmit
+  dataDelay: 60000
+  createNoteUrl: /flixrmi/notes/create
+  listNotesUrl: /flixrmi/notes/list
+  updateNoteUrl: /flixrmi/notes/update/
+  destroyNoteUrl: /flixrmi/notes/destroy/
+  connectionSet: 
+    ReadyClassName: ready
+    loadingId: loading
+    LoadingClassName: loading
+lastfmPlayerOptions:
+  authbaseUrl: /flixrmi/radio/authlastfm
+  playlistbaseUrl: /flixrmi/radio/list
+  playerAtt: aria-label
+  playerName: Yahoo! WebPlayer
+  playListId: lastfmPlaylist
+  errorPanel: errorPanel
+  errorDiv: errorDisplay
+  entryToggle: noteEntryToggle
+  authId: authFieldSet

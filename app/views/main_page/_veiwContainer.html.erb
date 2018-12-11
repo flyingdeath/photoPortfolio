@@ -1,0 +1,37 @@
+
+    <div id="<%= key %>">
+      <div class="hd">
+        <% if !listonly -%>
+          <div class="pageSliderIcon" id="<%= key %>_pageContainer">
+            <%= text_field_tag(key+"_pageField", 0, { :title => "Page Field.",
+                                                      :class => "pageField"}) %>
+          </div>
+        <% end -%>
+      </div>
+      <div class="bd">
+        <div id="<%= key %>_outerContainer" class="outerContainer">
+          <div id="<%= key %>_innerContainer">
+          
+          <!--div id="<%= key %>_pageSlider" class="pageSlider">
+            <div class="dummyScroll"></div>
+          </div-->
+            
+            <div id="<%= key %>_scrollContainer" class="veiwContainer">
+              <div          id="<%= key %>_lookContainer"      class="<%= lookClassList %>">
+                <div        id="<%= key %>_ShownDataContainer" class="<%= shownDataClassList %>">
+                  <div      id="<%= key %>_dataContainer"      class="<%= dataClassList %>">
+                    <div    id="<%= key %>_thumbView"          class="<%= thumbViewList %>">
+                      <div  id="<%= key %>_mainView">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="ft" id="<%= key %>_footer">Results: [ 0 ]</div>
+    </div>

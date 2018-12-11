@@ -1,0 +1,22 @@
+<%= @image_name %>
+<div>&#169; Brian Spiegel.</div>
+<%- if @exifrObj.exif? %>
+  <div>Date Time: <%=@exifrObj.date_time %></div>
+<br/>
+  <div>Make: <%=@exifrObj.make %></div>
+  <div>Model: <%=@exifrObj.model %></div>
+<br/>
+  <div>Lens Make: <%=@exifrObj.lens_make %></div>
+  <div>Lens model: <%=@exifrObj.lens_model %></div>
+<br/>
+  <div>Exposure Time: <%=@exifrObj.exposure_time.to_s %></div>
+  <div>F/Number: <%=@exifrObj.f_number.to_f  %></div>
+  <div>ISO: <%=@exifrObj.iso_speed_ratings.to_s %></div>
+  <div>Focal Length: <%=@exifrObj.focal_length %></div>
+<br/>
+  <%- if @exifrObj.gps %>
+    <div>latitude: <%=@exifrObj.gps.latitude %></div>
+    <div>longitude: <%=@exifrObj.gps.longitude %></div>
+  <%- end %>
+<%- end %>
+         

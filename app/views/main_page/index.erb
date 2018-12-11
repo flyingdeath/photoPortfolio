@@ -1,0 +1,142 @@
+<!--%= image_tag  '/Landscape - Nature/salinas Muontains/display/_MG_4367_set.jpg' %-->
+  <%=  javascript_tag do %>
+  /*------------------------------------------------------------------------------------------------*/   
+    window.onload = function(){
+        var helper = new helperClass();
+        var mv = new mainViewClass();
+        mv.errorDiv = 'errorDisplay';
+        mv.errorPanel = 'errorPanel'; 
+        var tree = <%= @tvNodes %>;
+        mv.h = helper; 
+        mv.clientVarsUpdate    = '<%= @clientVarsUpdate %>';
+        var panelIds           = <%= @panels[:elements].to_json.html_safe %>;
+        var panels             = <%= @panels.to_json.html_safe %>;
+        
+        var pageMarker         = <%= (render :partial => "pageMarker").to_json.html_safe %>;
+        var errorPanelHTML       = <%= (render :partial => "errorPanel").to_json.html_safe %>;
+        var orderPanelHTML       = <%= (render :partial => "orderPanel").to_json.html_safe %>;
+        var paginationMenu     = <%= @pagination.to_json.html_safe %>;
+        var paginationCallback = <%= @pagination[0]['callback'].to_json.html_safe %>;
+        var mouseRolodex       = <%= @pagination[1]['callback'].to_json.html_safe %>;
+        var autoScrollUp       = <%= @pagination[2]['callback'].to_json.html_safe %>;
+        var autoScrollStop     = <%= @pagination[3]['callback'].to_json.html_safe %>;
+        var autoScrollDown     = <%= @pagination[4]['callback'].to_json.html_safe %>;
+        var loadContainerObj   = <%= @mainPageSettings['loadContainer'].to_json.html_safe %>;
+        var scrollObj          = <%= @scrollObj.to_json.html_safe %>;
+        var titleVars          = <%= @mainPageSettings['titleVars'].to_json.html_safe %>;
+        
+        var btns               = <%= @mainPageSettings['btns'].to_json.html_safe %>;
+        var linkVars           = <%= @mainPageSettings['linkVars'].to_json.html_safe %>;
+        var hoverSettings      = <%= @mainPageSettings['hoverConnector'].to_json.html_safe %>;
+        scrollObj          = helper.evalKeys(scrollObj,'fn,instanceObj', {'mv':mv});
+        paginationCallback = helper.evalKeys(paginationCallback,'func,instanceObj', {'mv':mv});
+        autoScrollDown     = helper.evalKeys(autoScrollDown,'func,instanceObj', {'mv':mv});
+        autoScrollUp       = helper.evalKeys(autoScrollUp,'func,instanceObj', {'mv':mv});
+        autoScrollStop     = helper.evalKeys(autoScrollStop,'func,instanceObj', {'mv':mv});
+        helper.addlistenersSet(paginationCallback);
+        helper.addlistenersSet(autoScrollDown);
+        helper.addlistenersSet(autoScrollUp);
+        helper.addlistenersSet(autoScrollStop);
+        
+        
+        var list =  {'ScrollAtuoPageDown': "\u23F5",
+                    'ScrollAtuoStop': "\u23F9",
+                    'ScrollAtuoPageUP': "\u23F4",
+                    'mouseWheelPage': "\u23FA"};
+        helper.setbuttonLabels(list);
+        
+        new treeviewClass({id:'treeview_placeHolder',struct:tree, 'mv':mv});
+        titleVars.mv = mv;
+        
+        
+         panels.del = new delegateListClass({linkSet: linkVars, 
+                                             btnSet:btns, 
+                                             hoverSet: hoverSettings,
+                                             iSet: {
+                                                   hover:  new hoverDataConnectorClass(hoverSettings),
+                                                   item:   new titleItemClass(titleVars)},
+                                             options: {
+                                                 subContainerSufix: "_mainView",
+                                                 'panelIds': panelIds
+                                      }});
+                                             
+        helper.addlistenersSet({refList:["toggleTabClass"],
+                                  eventList:{click:{func: helper.toggleClassName_P,
+                                                    param:{id:'treeviewSidePanel', 
+                                                          classNames: ['tvSidePanel', 
+                                                               'tvSidePanel_toggle']}}}});
+        
+        
+        var i = 8;
+        
+             var clientViewPort = {clientwidth:  YAHOO.util.Dom.getViewportWidth(),
+                                   clientheight: YAHOO.util.Dom.getViewportHeight()}
+                           
+        panels.del.slideShow = new slideShowClass({containerId: 'container',
+                                           indexId: 'index',
+                                           pbtnId:'pausebtn',
+                                           nextBtnId:'nextbtn',
+                                           previousBtnId:'previousbtn',
+                                           stopbtn:'stopbtn',
+                                           btnContainer:"btncontainer",
+                                           fade:false,
+                                           fadeTime:1.5,
+                                           width:clientViewPort.clientwidth, 
+                                           height:clientViewPort.clientheight, 
+                                           IntOnly:true,
+                                           initInterval:i,
+                                           interval: i,
+                                           orderSet: [],
+                                           playBtnImage: '/assets/play_b.png',
+                                           pauseBtnImage: '/assets/p_b.png',
+                                           imagePrefix: '',
+                                           imageExt: 'jpg',
+                                           title: ' <br/>&#169; Brian Spiegel.<br/>'
+                                          });
+                                            
+        
+        
+         mv.panelsObj = new panelClass(panels);
+         scrollObj['mv'] = mv;
+        mv.scrollObj = new scrollClass(scrollObj);
+        mv.panelsObj.scrollObj = mv.scrollObj;
+          
+         mv.panelIds         = panelIds;
+        //scrollObj.panelsObj = mv.panelsObj; 
+        //scrollObj.mv = mv; 
+        mv.panelsObj.hover = panels.del.iSet.hover;
+        mv.hover =  mv.panelsObj.hover;
+        mv.panelsObj.mv = mv;
+        panels.mv = mv;
+        panels.pageMarker = pageMarker;
+        mv.slideShow = panels.del.slideShow
+        
+        panels.del.scrollObj = mv.scrollObj;
+        
+        mv.initalizeinfoContainer( loadContainerObj); 
+        
+        mv.updateClientViewport({baseUrl:"/main_page/clientVarsUpdate",
+                                debugOutputId:'initialoutput'});
+                                
+        mv.createPanel({id:mv.errorPanel, innerHTML: errorPanelHTML, header:"Server Error" });
+        mv.createPanel({id:'orderPanel', innerHTML: orderPanelHTML, header:"Ordering Info" });
+    
+    
+        mv.panelsObj.panelMaximize_p({name:"categoryPanel"});
+      YAHOO.util.Event.addListener(document.body.id, 'contextmenu ', function(e){
+    alert('success!');  
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;});
+        
+        helper.fadeAnimation({run: true, seconds: 1.0, obj:"loadingMainScreen", start:1.0, finish: 0.0, onComplete: function(){
+          YAHOO.util.Dom.setStyle("loadingMainScreen", "display", "none");
+        }})
+    }
+  /*------------------------------------------------------------------------------------------------*/   
+ <% end -%>
+ 

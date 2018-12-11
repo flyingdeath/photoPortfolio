@@ -1,0 +1,19 @@
+<% columnCount = 1 -%>
+
+<% @titles.each do |title|-%>
+  <% if (@columnsMax == columnCount) -%>
+    <% columnCount = 1 -%>
+    </tr><tr>
+  <% end -%>
+  <td class="flimItemTableCell">
+    <div class="flimItem" id="flim<%=title.id%>">
+      <div class="flimInfo">
+        <%=  render :partial => "details", 
+                    :locals =>{ :ratingInfo => @ratings[title.ext_id],
+                                 :title      => title}  %>
+      </div>
+    </div>
+  </td>
+  <% columnCount +=1 -%>
+<% end -%>
+<%=  render :partial => "results" %>

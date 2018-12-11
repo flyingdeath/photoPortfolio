@@ -1,0 +1,41 @@
+--- 
+:markerOffset: 20
+:scrollOffset: 100
+:interval: 250
+:pageField: _pageField
+:pageSliderSurfix: _pageSlider
+:pageSliderThumbSurfix: _pageSliderThumb
+:autoScrollscaler: 0.05
+:pageSliderDims:
+- 0
+- 100
+:indexClassName: flimItem
+:containerSurfix: _scrollContainer
+:delay: 1000
+:showdelay: 1
+:hidedelay: 100
+:pageContainer: inlinePageContainer
+:pageContainerPrefix: _pageContainer
+:pageMaxClass: pageSliderIconMax
+:pageClass: pageSliderIcon
+:autodismissdelay: 100
+:bgSurfix: _styledBG
+:elements:  
+  :searchPanel_scrollContainer: &id001
+    :instanceObj: args.mv
+    :fn: args.mv.endlessScroll
+    :loading: false
+    :finished: false
+    :paramSet: 
+      :baseUrl: /main_page/listPagination
+      :loadingImageId: loading
+      :loadingloadingClassName: loading
+      :loadingReadyClassName: ready
+      :actionKey: pagination
+      :SessionKey: listAction
+      :pageValue: pageForward
+      :surfix: _subContainer
+      :pageKey: page
+  :categoryPanel_scrollContainer: *id001
+ 
+    

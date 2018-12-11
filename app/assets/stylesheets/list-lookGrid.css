@@ -1,0 +1,165 @@
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.LookGrid .flimList {
+   margin:0px;
+   padding:0px;
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.LookGrid .flimItem {
+  margin: 10px 17px 0;
+  vertical-align:top;
+  display: inline-block;
+ }
+ 
+ .LookGrid .flimList .flimItem{
+  
+   min-width: 150px;
+   /* max-width: 589px;  */ 
+   min-height: 150px;
+   
+   
+ }
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+
+.LookGrid .DataPlacementRightJustfied li.flimItem:hover .flimExtraInfo,
+.LookGrid .DataPlacementRightJustfied  li.flimItem:hover .flimThumbExtraInfo,
+.LookGrid .DataPlacementRightJustfied  li.flimItem:hover .flimTitle,
+.LookGrid .DataPlacementRightJustfied  li.flimItem:hover .PeopleList,
+.LookGrid .DataPlacementRightJustfied  li.flimItem:hover .ExtendedData,
+.LookGrid .DataPlacementStatic  li.flimItem:hover .flimExtraInfo,
+.LookGrid .DataPlacementStatic  li.flimItem:hover .flimThumbExtraInfo,
+.LookGrid .DataPlacementStatic  li.flimItem:hover .flimTitle,
+.LookGrid .DataPlacementStatic  li.flimItem:hover .PeopleList,
+.LookGrid .DataPlacementStatic  li.flimItem:hover .ExtendedData{
+  display:block;
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.LookList .ShownDataAll{
+
+}
+/*
+
+
+.LookGrid .ShownDataThumb .flimTitle,
+*/
+
+.flimTitle{
+
+  display:inline-block;
+}
+
+
+.LookGrid .ShownDataThumb .flimExtraInfo,
+.LookGrid .ShownDataThumb .ExtendedData{
+  display:none;
+}
+
+
+.LookGrid .ShownDataName .flimThumbExtraInfo{
+  display:none;
+}
+
+.LookGrid .ShownDataSome .PeopleList,
+.LookGrid .ShownDataSome .ExtendedData{
+  display:none;
+}
+
+.LookGrid .ShownDataLess .flimExtraInfo,
+.LookGrid .ShownDataLess .ExtendedData{
+  display:none;
+}
+
+
+.LookGrid .ShownDataLess .flimTitle{
+    width: 110px;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.LookGrid .DataPlacementRightJustfied li.flimItem:hover,
+.LookGrid .DataPlacementStatic li.flimItem:hover {
+   z-index:1;
+   padding: 10px;
+}
+
+.LookGrid .DataPlacementRightJustfied li.flimItem:hover .flimInfo,
+.LookGrid .DataPlacementStatic li.flimItem:hover .flimInfo{
+  background-color:#222;
+    width: 560px;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.LookGrid .DataPlacementStatic li.flimItem:hover {
+}
+
+.LookGrid .DataPlacementStatic li.flimItem:hover .flimInfo {
+    position: absolute;
+    background-color: #222;
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.LookGrid .DataPlacementClose .flimItem {
+  margin:0px;
+  min-height:150px;
+}
+.LookGrid .DataPlacementClose .BoxArtLarge{
+  padding:0px;
+  float: none;
+
+}
+.LookGrid .DataPlacementClose .infoBackground{
+/*
+  border-radius: 0px;*/
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+
+.LookGrid .DataPlacementHover .BoxArtLarge{
+  float: none;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.LookGrid .DataPlacementRightJustfied .flimlist{
+  position:relative;
+}
+
+.LookGrid .DataPlacementRightJustfied li.flimItem:hover{
+ 
+}
+
+.LookGrid .DataPlacementRightJustfied li.flimItem:hover .flimInfo{    
+    right: 0;
+    position: absolute;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/

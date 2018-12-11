@@ -1,0 +1,11 @@
+
+<div class="flimItemControlsContainer">
+  <div id="<%=title[:display].gsub(  @asset_images, "") %>_<%=@listType%>_flimControls"  class="flimItemControls">
+      <div class="tagControl">
+        Tag: <%= check_box_tag title[:display].gsub(  @asset_images, "") + "_" + @listType.to_s + "_tag", "tagged", (!(@taglist.index(title[:display].gsub(  @asset_images, "")).nil?)) %>
+      </div>
+      <div id="<%=title[:display].gsub(  @asset_images, "") %>_<%=@listType%>_queueBtns" class="queueBtns">
+               <div id="<%=title[:display].gsub(  @asset_images, "") %>_<%=@listType%>_play" class="control-btn"><div class="play" title="Play"></div></div>
+      </div>
+  </div>
+</div><!--flimItemControlsContainer-->

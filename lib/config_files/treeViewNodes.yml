@@ -1,0 +1,46 @@
+--- 
+- :label: Tags
+  :fn: tvListNew
+  :param: 
+    :treeviewId: treeview_placeHolder
+    :mainViewId: categoryPanel_mainView
+    :baseUrl: /main_page/getTagList
+    :instanceObj: this.mv
+    :loadingImageId: loading
+    :loadingReadyClassName: ready
+    :loadingloadingClassName: loading 
+- :label: Tags
+  :fn: tvListNew
+  :param: 
+    :treeviewId: treeview_placeHolder
+    :mainViewId: categoryPanel_mainView
+    :baseUrl: /main_page/getTagList
+    :instanceObj: this.mv
+    :loadingImageId: loading
+    :loadingReadyClassName: ready
+    :loadingloadingClassName: loading 
+- :label: All 
+  :fn: tvListNew
+  :param: 
+    :mainViewId: categoryPanel_mainView
+    :baseUrl: /main_page/listCategoryAll
+    :treeviewId: treeview_placeHolder
+    :instanceObj: this.mv
+    :loadingImageId: loading
+    :loadingReadyClassName: ready
+    :loadingloadingClassName: loading 
+- :label: Order 
+  :fn: tvOrderDialog
+  :param: 
+    :panel: orderPanel
+    :mainViewId: orderPanel_mainView
+    :treeviewId: treeview_placeHolder
+    :instanceObj: this.mv
+    :loadingImageId: loading
+    :loadingReadyClassName: ready
+    :loadingloadingClassName: loading 
+- :label: Links 
+  :children: 
+  - :label: MUBI
+    :url: http://www.MUBI.com
+    :target: blank

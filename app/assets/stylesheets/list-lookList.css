@@ -1,0 +1,181 @@
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+.LookList .flimlist {
+   margin:0;
+   padding:0;
+   position:relative;
+   width:75%
+}
+
+.LookList .flimItem {
+   z-index:0; 
+  padding:5px;
+}
+.LookList .flimInfo {
+   z-index:0; 
+}
+
+.LookList .flimTitle {
+  vertical-align:top;
+}
+
+
+.LookList .flimItemControlsContainer{
+   right: -70%;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.LookList li.flimItem:hover .flimInfo{
+  display:inline-block;
+}
+
+
+.LookList .DataPlacementRightJustfied li.flimItem:hover .flimExtraInfo,
+.LookList .DataPlacementRightJustfied  li.flimItem:hover .flimThumbExtraInfo,
+.LookList .DataPlacementRightJustfied  li.flimItem:hover .flimTitle,
+.LookList .DataPlacementRightJustfied  li.flimItem:hover .PeopleList,
+.LookList .DataPlacementRightJustfied  li.flimItem:hover .ExtendedData,
+.LookList .DataPlacementStatic  li.flimItem:hover .flimExtraInfo,
+.LookList .DataPlacementStatic  li.flimItem:hover .flimThumbExtraInfo,
+.LookList .DataPlacementStatic  li.flimItem:hover .flimTitle,
+.LookList .DataPlacementStatic  li.flimItem:hover .PeopleList,
+.LookList .DataPlacementStatic  li.flimItem:hover .ExtendedData{
+  display:block;
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.LookList .ShownDataAll{
+
+}
+
+
+.LookList .ShownDataThumb .flimExtraInfo,
+.LookList .ShownDataThumb .flimTitle,
+.LookList .ShownDataThumb .ExtendedData{
+  display:none;
+}
+
+
+.LookList .ShownDataName .flimThumbExtraInfo{
+  display:none;
+}
+
+.LookList .ShownDataSome .PeopleList,
+.LookList .ShownDataSome .ExtendedData{
+  display:none;
+}
+
+.LookList .ShownDataLess .flimExtraInfo,
+.LookGrid .ShownDataLess .ExtendedData{
+  display:none;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+
+.LookList .DataPlacementRightJustfied .flimThumbExtraInfo{
+    width: 560px;    
+    background-color: #222;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 560px;
+    z-index: 1;
+}
+
+.LookList .DataPlacementRightJustfied .flimExtraInfo {
+    width: 560px;
+}
+
+
+.LookList .DataPlacementRightJustfied li.flimItem:hover{
+  z-index:1; 
+}
+
+.LookList .DataPlacementRightJustfied li.flimItem:hover .flimInfo {
+    display: block;
+}
+
+.LookList .DataPlacementRightJustfied .ThumbLarge li.flimItem:hover .flimExtraInfo{     
+    position: absolute;   
+    right: -30%;
+}
+
+.LookList .DataPlacementRightJustfied .ThumbNone li.flimItem:hover .flimThumbExtraInfo{     
+    position: absolute;   
+    right: -30%;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+ 
+ .LookList .DataPlacementStatic .flimlist{
+  z-index:0;  
+}
+
+
+.LookList .DataPlacementStatic .flimItem {
+  position:relative;
+  margin:0px;
+}
+
+.LookList .DataPlacementStatic .flimInfo{
+ display:inline-block;
+ z-index:0;  
+}
+
+.LookList .DataPlacementStatic li.flimItem:hover {
+  z-index:1;
+}
+
+.LookList .DataPlacementStatic li.flimItem:hover .flimInfo{
+  z-index:1;  
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.LookList .Thumbnone  li.flimItem:hover{
+  /* 
+  height:110px;
+  */
+} 
+ 
+.LookList .ThumbSmall li.flimItem:hover{
+   
+  /* 
+  height:163px;
+  */
+} 
+
+.LookList .ThumbMedium li.flimItem:hover{
+  
+  /* 
+  height:200px;
+  */
+}
+
+.LookList .ThumbLarge li.flimItem:hover{
+
+  /* 
+  height:300px;
+  */
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/

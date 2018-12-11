@@ -1,0 +1,19 @@
+
+ <div id="panelsContainer">
+   <% @panels[:normalListPanels].each do |panelName| -%>
+    <%= render :partial => "veiwContainer", :locals => {:lookClassList      => @lookClassList[panelName],
+                                                        :shownDataClassList => @ShownDataClassList[panelName],
+                                                        :dataClassList      => @dataClassList[panelName],
+                                                        :thumbViewList      => @thumbViewList[panelName],
+                                                        :key => panelName,
+                                                        :listonly => false} %>
+  <% end -%>
+  <% @panels[:ListOnlyPanels].each do |value| -%>
+    <%= render :partial => "veiwContainer", :locals => {:lookClassList      => "LookList",
+                                                        :shownDataClassList => "ShownDataName",
+                                                        :dataClassList      => "DataPlacementHover",
+                                                        :thumbViewList      => "ThumbNone ThumbHoverLarge",
+                                                        :key => value,
+                                                        :listonly => true} %>
+  <% end -%>
+</div>

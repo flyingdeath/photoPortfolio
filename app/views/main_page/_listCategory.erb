@@ -1,0 +1,6 @@
+
+ <ul class="flimList" id="<%=@listType%>_subContainer">
+    <%=  render :partial => "listCategoryLoop", 
+                :locals  => {:titles => @titles, :saved => false} %>
+ </ul>
+<div class="vSpacer"></div>

@@ -1,0 +1,30 @@
+--- 
+:defaults:
+  :height: 600px
+  :width: 800px
+  :visible: false
+  :zIndex: 1
+:bgContianer: background_mainContainer
+:innerSurfix: _innerContainer
+:outerSurfix: _outerContainer
+:groups:
+- Lists
+- Info
+:menuId: _PanelsMenu
+:mainMenuId: mainMenu_placeHolder
+:domContainerSurfix: _c
+:heightOffSet: 40
+:bottomOffSet: 10
+:imageCheckUrl: /flixrmi/title/imageChecker
+:imagePathHD: '/boxshots/ghd/'
+:imagePathL: '/boxshots/large/'
+:BoxArtClass: BoxArtImage
+:BlankFileSize: 7718
+:elements:  
+  :categoryPanel:
+    :header: Category
+    :hookId: panelsContainer
+    :groupIndex: 1
+:normalListPanels:
+  - categoryPanel
+:ListOnlyPanels: []

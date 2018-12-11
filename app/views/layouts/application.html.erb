@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+
+<meta http-equiv="content-type" content="css/html/text; charset=iso-8859-1">
+<meta name="abstract" content="photos,portifolio,brian,spiegel,Samuel,brian Spiegel, Brians Samuel Spiegel">
+<meta name="copyright" content="brianspiegelPhoto.com (C)opyright 2018 All Rights Reserved">
+<meta name="date" content="2018">
+<meta name="description" content="photo portifolio is simple to use website the allows you browse my photos catalog. It is designed as desktop like application and uses the newest of web technologies to deliver the a fresh new look a the photos. Through the web-space you can sort, filter, and navigate the my catalog like never before. The idea's behind photo portifolio is simple and minimalistic, so the user interface won't get in your way. ">
+<meta name="distribution" content="global">
+<meta name="keywords" content="photos,portifolio,photography,brian,spiegel,Samuel,brian Spiegel, Brians Samuel Spiegel">
+<meta name="language" content="english">
+<meta name="publisher" content="www.brianspiegelPhoto.com">
+<meta name="rating" content="general">
+<meta name="revisit-after" content="10 days">
+<meta name="robots" content="index,follow">
+<meta name="title" content="Photo Portfolio">
+   <link rel="shortcut icon" href="/favicon.ico" />
+     <title>PhotoPortfolio</title>
+     <%=render :partial => "fileLink" %>  
+     <%= yield %>
+  </head>
+  
+  
+  <body class="yui-skin-sam" style="<%=@bodyBG%>">
+    <div id="mainMenu_placeHolder"></div>
+      <p class="flashoutput" >
+        <%= flash[:notice] %>
+      </p>
+      <div id="initialoutput"></div>
+      <%=render :partial => "veiwContainers" %>
+     
+      <div id="treeviewSidePanel" class="tvSidePanel_toggle">
+          <div id="treeview_placeHolder"  class="ygtv-highlight"></div>
+          <div class="pullTab"></div>
+          <div class="toggleTab" id="toggleTabClass"></div>
+      </div>
+      
+      <div id="page">
+        <div id="container">
+        </div>
+        <div id="btncontainer">
+          <%= image_tag("left_arrow.png", {:id=> "previousbtn"}) %>
+          <%= image_tag("p_b.png", {:id=> "pausebtn"}) %>
+          <%= image_tag("right_arrow.png", {:id=> "nextbtn"}) %>
+          <%= image_tag("cross.png", {:id=> "stopbtn"}) %>
+        </div>
+        <span id="index"></span>
+      </div>
+      
+    
+      <div class="mainVeiwContainer" id="background_mainContainer"></div>
+      <div id="loadingMainScreen">
+        <div id="title">Loading...</div>
+        <div id="logo"><%= image_tag("logo_small.png") %> </div>
+        <div id="loadicon"></div>
+      </div>
+      <div id="toolTip_container"></div>   
+      <div id="inlinePageContainer"></div>
+      <div id="inlineScroll">
+        <span id="ScrollAtuoPageUP" title="Auto Scroll up"></span>     
+        <span id="ScrollAtuoStop" title="Auto Scroll Stop"></span>    
+        <span id="ScrollAtuoPageDown" title="Auto Scroll down"></span> 
+        <span id="mouseWheelPage" title="Use Mouse Wheel to Page Scroll up or Down"></span>  
+      </div> 
+      
+      
+      <div id="inlineInfoContainer"><span></span></div> 
+      
+      <%=render :partial => "cache_pictures" %>
+      <div id="logo"><%= image_tag("logo_small.png") %> </div>
+      
+      <div id="copyright_info">&#169; 2018 All Rights Reserved Brian Spiegel.  </div>
+  </body>
+</html>
+
+

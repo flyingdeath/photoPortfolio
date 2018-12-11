@@ -1,0 +1,10 @@
+<% itemIndex = 0 -%>
+    <% titles.each do |title|-%>
+           <li class="flimItem" id="title_<%= title[:display].gsub(  @asset_images, "") %>_<%=@listType%>_flim">
+             <div class="flimInfo" id="title_<%= title[:display].gsub(  @asset_images, "") %>_<%=@listType%>_flimInfo">
+                 <%=  render :partial => "details",
+                             :locals =>{ :title      => title, :itemIndex => itemIndex}  %>
+             </div>
+           </li>
+      <% itemIndex += 1 -%>
+   <% end-%>

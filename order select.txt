@@ -1,0 +1,26 @@
+
+    if params["listorder"] == "date"
+      @@titles = @@titles.sort{|a,b|
+        begin
+          aDate = File.new((File::join @@asset_images, a[:display])).mtime
+          bDate = File.new((File::join @@asset_images, b[:display])).mtime
+          aDate <=> bDate
+        rescue
+          0 <=> 1
+        end
+      }
+    end
+      <div id="listorderContainer"><select id="listorder" name="listorder">
+        <option value="alphabetical">alphabetical</option>
+        <option value="date">date</option>
+      </selet>
+      </div> 
+      
+      
+      
+        var l = this.h.getSelectValue("listorder");
+          if(!connectionSet.params){
+            connectionSet.params = {};
+          }
+   connectionSet.params['listorder'] = l;
+   

@@ -1,0 +1,11 @@
+--- 
+- :clientwidth
+- :clientheight
+- :SortEnvelop
+- :FilterEnvelop
+- :ViewEnvelop
+- :color
+- :backgroundImage
+- :backgroundColor
+- :itemLimit 
+- :thumbsize

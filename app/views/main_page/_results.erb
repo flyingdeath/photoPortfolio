@@ -1,0 +1,24 @@
+
+<!--resultsData
+   var results = {};
+   
+   <% if @status
+      if @status.details -%>
+       results.status = <%= @status.details.attributes.to_json.html_safe %>;
+       <% renderedDetails = true -%>
+     <% end -%>
+   <% end -%>
+   
+   <%if @titles  -%>
+       results.titlesLength = <%= @titles.length.to_s %>;
+       results.categoryViewType = '<%= @categoryViewType %>';
+       results.paginationVars   = <%= @paginationVars.to_json.html_safe %>;
+       <% if @titlesData
+          if @titlesData.details -%>
+           results.details = <%= @titlesData.details.attributes.to_json.html_safe %>;
+           <% renderedDetails = true -%>
+         <% end -%>
+       <% end -%>
+   <% end -%>
+
+resultsData-->

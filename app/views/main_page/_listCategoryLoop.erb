@@ -1,0 +1,12 @@
+<% if defined?(titles) -%>
+
+  <%=  render :partial => "listCategoryLoopInner", 
+              :locals  => {:titles => titles, :saved => saved} %>
+            
+<% else -%>
+  <%=  render :partial => "listCategoryLoopInner", 
+              :locals  => {:titles => @titles, :saved => false} %>
+
+<% end -%>
+
+<%=  render :partial => "results" %>

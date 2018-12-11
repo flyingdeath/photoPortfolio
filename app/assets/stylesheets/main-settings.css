@@ -1,0 +1,835 @@
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+html{
+  overflow:hidden;
+}
+
+body{
+  color:#FFF;
+  /*
+  */
+  background-color:#000;
+  background-image:url('/wallpapers/flixmontagelogo.JPG');
+  
+  background-size: 100% auto;
+  margin:0;
+  padding:0;
+  z-index:-2;
+}
+
+#cache_pictures{
+  display:none;
+}
+
+.vSpacer{
+   height:150px;
+}
+
+.flashoutput{
+  color: green;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+#inlineInfoContainer{
+ position:absolute;
+ top:0px;
+ left: 20px;
+
+}
+
+#listorderContainer{
+ position:absolute;
+ top:0px;
+ left: 220px;
+
+}
+
+#index{
+  
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    z-index:3;
+}
+#container{
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
+  height:100%;
+  /*
+  width:760px;
+  border:20px solid #000;
+  */
+  
+  background-color:#000;
+  padding:0px;
+  z-index:3;
+}
+
+#pausebtn,
+#nextbtn,
+#stopbtn,
+#previousbtn{
+  padding:2px;
+  display:inline-block;
+}
+
+#hiddenImage{
+  display:none;
+}
+
+#btncontainer{
+  left: 42%;
+  opacity:1;
+  position: absolute;
+  bottom:0px;
+  width:300px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  padding:10px;
+  z-index:3;
+}
+
+#page{
+  display:none;
+  width:100%;
+  height:100%;
+  background-color:#000;
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:3;
+}
+
+#inlineScroll{
+
+ position:absolute;
+ top:0px;
+ left:50%;
+  cursor:default;
+  font-size:20px;
+
+}
+
+#copyright_info{
+  
+   position:absolute;
+   bottom:0px;
+   left:90%;
+}
+
+#logo{
+position: absolute;
+
+  z-index:3;
+bottom: 35px;
+right: 33px;
+   
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited{
+  color:#fff;
+}
+
+#SearchAutoComplete{
+ display:inline-block;
+ width:220px;
+ position:absolute;
+ right:26px;
+ margin-top:1px;
+}
+
+#searchfield{
+ display:inline;
+}
+
+#Search_AC_Container{
+ color:black;
+}
+
+#searchSubmitBtn{
+  position:absolute;
+  right:0;
+}
+
+.SearchBlur{
+ color:#CCC;
+}
+
+.SearchFocus{
+ color:#FFF;
+}
+
+#Search {
+ background-color: #000;
+ border: 1px inset #222222;
+ height: 18px;
+ margin: 1px;
+}
+
+#bulksearch{
+  border: 1px inset #222222;
+  background-color: #000;
+  margin: 1px;
+  color:#FFF;
+  display:none;
+  width:220px;
+  height:420px;
+  position: absolute;
+  z-index:2;
+}
+
+#bulksearchBtn{
+  display:none;
+  background-color: #000;
+  margin: 1px;
+  color:#FFF;
+  position: absolute;
+  top: 424px;
+  z-index:2;
+}
+
+#bulksearchControl{
+  display:inline-block;
+  width:20px;
+  height:20px;
+  background-image:url(icons.png);
+  background-position: -22px -112px;
+}
+
+.fullsearch{
+  float:right;    
+  margin-bottom: 2px;
+  margin-right: 14px;
+}
+
+a.fullsearch:link {
+  color:#FFF;
+}    
+a.fullsearch:visited {
+  color:#FFF;
+} 
+a.fullsearch:hover {
+  color:#CCC;
+} 
+a.fullsearch:active {
+  color:#FFF;
+}  
+  
+
+.veiwContainer{
+  position:relative;
+  cursor:default;    
+  overflow-x: hidden;
+  overflow-y: auto;
+  width:100%;
+  height:96%;
+}
+
+#panelsContainer .veiwContainer{
+  height:100%;
+}
+#background_mainContainer .veiwContainer{
+  height:95%;
+}
+
+.dummyScroll{
+  width:10000%;
+  height:1px;
+}
+
+/*
+#background_mainContainer .pageSlider{
+  width:95%;
+}
+
+#panelsContainer .pageSlider{
+  width:100%;
+}
+
+.pageSlider{
+  right:25px;
+  overflow-x: scroll;
+  position: relative;
+  z-index:1;
+  width:21px;
+}
+*/
+ .scrollAutoContainer{
+    position: absolute;
+    left: 420px;
+    top: 22px;
+    height:75px;
+    visibility:hidden;
+    z-index:100000;
+ }
+
+ .scrollAutoContainer .yui-h-slider{
+    width:140px;
+ }
+ 
+li#ScrollAtuoStop:hover .scrollAutoContainer{
+  visibility:visible;
+} 
+
+ 
+
+.yui-skin-sam .yui-h-slider{
+  background: url(Silder_assets/bg-h-l.gif) 0px 0;
+  z-index: 1;
+  position:relative;
+}
+
+.ThumbContainer .yui-h-slider{
+  width:400px;
+  right:5px
+}
+
+.ThumbIconMax,
+.ThumbIcon{
+ background-image:url(icons.png);
+  background-position: 0px 0px;
+  background-repeat:no-repeat;
+  width: 20px;
+  height: 20px;
+  z-index: 1; 
+  overflow: visible;
+}
+
+.ThumbIcon{
+  position: absolute;
+  right: 217px;
+  top: 2px;
+}
+
+.ThumbContainer{
+  visibility:hidden;
+  width: 410px;
+  height:75px;
+  position:relative;
+  top: 15px;
+  right:205px;
+}
+
+div.ThumbIconMax:hover .ThumbContainer,
+div.ThumbIcon:hover .ThumbContainer{
+  visibility:visible;
+} 
+
+.yui-skin-sam .yui-v-slider{
+  background: url(Silder_assets/bg-v-c.gif) 12px 0;
+  height:500px;
+  z-index: 1;
+  position:relative;
+  left: 35px;
+}
+
+
+.pageSliderIconMax,
+.pageSliderIcon{
+  background-image:url(new_page_small.png);
+ /*  background-position: 0px -251px;*/
+  background-repeat:no-repeat;
+  width: 20px;
+  height: 20px;
+  z-index: 1; 
+  overflow: visible;
+}
+
+
+.pageSliderIconMax{    
+  display: inline;
+  position: absolute;
+  right: 262px;
+  top: 2px;
+
+}
+
+.pageSliderIcon{
+  position: absolute;
+  right: 62px;
+  top: 4px;
+}
+
+.pageSliderBackground{
+  visibility:hidden;
+  position:relative;
+  right:65px;
+  width:75px;
+}
+
+div.pageSliderIconMax:hover .pageSliderBackground,
+div.pageSliderIcon:hover .pageSliderBackground{
+  visibility:visible;
+} 
+
+.pageField{
+  height:16px;
+  width:2em;
+  font-size:14px;
+  margin-left: -15px
+}
+
+.outerContainer{
+  position: relative;
+}
+
+.mainLoadContainer{
+ /*
+ position:absolute;
+ right:242px;*/
+}
+/*
+  position: absolute;
+  right: 15px;
+  z-index: 1; 
+#loading{
+   background-image:url(/yui/build/assets/skins/sam/wait.gif");
+   height:18px;
+   width:18px;
+   backgound-repeat:no-repeat;
+   position:relative;
+   top:4px;
+}
+*/
+
+.ready{
+ display:none;
+}
+
+.loading{
+  display:block;
+}
+.ready, 
+.loading {
+   background-image:url("/yui/build/assets/skins/sam/wait.gif");
+   height:18px;
+   width:18px;
+   backgound-repeat:no-repeat;
+   position:relative;
+   top:4px;
+}
+
+.pullTab{  
+    background: url("/yui/build/assets/skins/sam/sprite.png") no-repeat scroll 0 -500px transparent;
+    height: 15px;
+    position: relative;
+    top: 50%;
+    width: 26px;
+}
+
+.toggleTab{         
+    background-image: url("icons.png");
+    background-position: -22px -112px;
+    display: none;
+    height: 20px;
+    left: 350px;
+    position: absolute;
+    top: 5px;
+    width: 20px;
+    z-index: 0;
+}
+
+.tvSidePanel,
+.tvSidePanel_toggle{
+  width:10px;
+  height: 95%;   
+  position: absolute;
+  top: 26px;
+  z-index:1;
+}
+
+.tvSidePanel_toggle #treeview_placeHolder,
+.tvSidePanel_toggle .toggleTab{
+  display: block;
+}
+
+div.tvSidePanel:hover #treeview_placeHolder,
+div.tvSidePanel:hover .toggleTab{    
+  display: block;
+}
+
+div.tvSidePanel:hover{
+  width: 400px;
+  display:block;
+}
+
+#treeview_placeHolder {
+  display:none;
+  color: #FFF;
+  height: 100%;
+  overflow: auto;
+  width: 400px;  
+  position: absolute;
+  z-index: 0;
+}
+
+#treeview_placeHolder .ygtvlabel {
+  color: #FFF;
+  background-color: #000;
+}
+
+.ygtv-highlight .ygtv-highlight1, 
+.ygtv-highlight .ygtv-highlight1 .ygtvlabel{
+    background-color: #333;
+    color: #FFF;
+}
+
+#background_mainContainer{     
+  margin-left: 26px;
+  z-index: -1;
+}
+
+#background_mainContainer{
+ /*
+ -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+ filter:alpha(opacity=85);
+ opacity:0.85;
+ -moz-opacity:0.85;
+ */
+}
+
+div.tvSidePanel_toggle~#background_mainContainer{ 
+  margin-left: 400px;
+}
+
+#s1sh,
+#s1f,
+#s1sh,
+#s2p,
+#s1h,
+#s2sh,
+#s1p,
+#s2sh{
+  width:4px; 
+  height:4px;
+  z-index:1000;
+  border:solid white 1px;
+}
+
+#s1sh{
+   background-color:blue;
+}
+#s1f{
+   background-color:yellow;
+}
+#s1h{
+   background-color:red;
+}
+
+#s1p{
+   background-color:green;
+}
+
+#s2sh{
+   background-color:brown;
+}
+#s2h{
+   background-color:white;
+}
+
+#s2p{
+   background-color:purple;
+}
+
+#noteEntryToggle,
+#doneToggle{
+  background-image:url(icons.png);
+  width:20px;
+  height:20px;
+  display:inline-block;
+}
+
+#noteEntryToggle{
+  background-position: 0px -42px;
+}
+
+#doneToggle{
+  background-position: -22px -109px;
+  margin-top:5px;
+}
+
+.hideDoneItems .doneItem{
+  display:none;
+}
+
+#noteInputFieldSet{
+  margin-top:40px;
+  display:none;
+}
+
+#noteBody{
+  width:600px;
+  height:200px
+}
+#noteDisplaylist{
+  
+  list-style-type:none;
+}
+
+#noteDisplaylist h4{
+padding:0px;
+margin:0px;
+}
+
+.meta_info{
+margin:10px;
+  
+}
+
+a.destroy_link:link,
+a.destroy_link:visited,
+a.destroy_link:hover,
+a.destroy_link:active {
+  color:#FFF;
+}  
+a.tvLink:link,
+a.tvLink:visited,
+a.tvLink:hover,
+a.tvLink:active {
+  color:#FFF;
+}  
+
+
+
+
+.errorClear{
+  background-image:url(icons.png); 
+  background-position: -9px -383px;
+  height: 25px;
+  width: 25px;
+  margin-left: auto;
+}
+
+#loadingMainScreen{    
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    z-index: 90000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+
+#loadicon{
+   background-image: url("animated.ajax.loader.gif");
+   background-position: -1px -1px;
+   margin-left: -48px;
+   height: 48px;
+   width: 48px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+}
+  
+#title{
+  color:#FFF;     
+  color: #FFFFFF;
+  left: 50%;
+  margin-left: -50px;
+  position: absolute;
+  top: 25%;   
+}
+  
+.bSub{
+   color:red;
+}
+
+pre {
+    overflow: auto;
+}
+
+.PanelClose{
+  background-image: url("/yui/build/assets/skins/sam/sprite.png");
+  background-position: 0 -300px;
+  background-repeat: no-repeat;
+  height: 18px;
+  left: 93%;
+  position: relative;
+  top: 0;
+  width: 26px;
+}
+
+#filterPanelContainer{
+  position: absolute;
+  left:21px;
+  z-index:100;
+  width:350px;
+  padding:20px;
+  background-color:#222;
+}
+.selectContainer{
+  display:inline-block;
+}
+.selectLabel{
+  display:block;
+}
+  
+.bgControlImage {    
+    display: inline-block;
+    position: relative;
+    padding: 4px;
+    background-color: #000;
+}
+
+.bgControlImage img {
+    vertical-align: middle;
+}
+
+#WallpaperContainer {
+}
+.colorDiv{
+  width:100px;
+  height:100px;
+    display: inline-block;
+}
+
+
+#controlImages,
+#controlColors{   
+    padding: 15px;   
+    position: absolute;
+    height: 75%; 
+}
+.controlcontainer{
+    height: 100%;
+    margin: 0px;
+    overflow: auto;
+}
+#containerToggle{
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+  a.playlist_link:link,
+  a.playlist_link:visited,
+  a.playlist_link:hover,
+  a.playlist_link:active{
+    color:#FFF;
+  }  
+
+  a.member_link:link,
+  a.member_link:visited,
+  a.member_link:hover,
+  a.member_link:active{
+    color:#FFF;
+    font-size:10px;
+  }  
+  
+  .member_link_container{
+    margin-left:50px;
+  }
+  
+  #authFieldSet{
+    display:none;
+  }
+  
+ #lastfmPlaylist{
+  
+  
+  /*
+  display:none;
+  z-index:-300;
+  */
+ }
+ 
+ #authToggle{
+  position: absolute;
+  right:10px;
+  top:25px;
+ }
+ 
+ #lastfm_tune{
+  display:inline-block;
+ }
+ 
+ #limitDialog{   
+    width: 800px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    position: relative;
+    top: 10%;
+    z-index: 10000;
+    display: none;
+ }
+ #itemLimitContainer{
+    margin-left: auto;
+    margin-right: auto;
+    width:10em;
+    padding: 10px;
+ }
+ 
+ #graphCaption{    
+    font-size: 11px;
+    text-align: center;
+ }
+ 
+.instr{
+    font-size:12px;
+ }
+ 
+ #itemLimitContainer div {
+     text-align: center;
+ }
+
+ #itemLimit{
+    display: block;
+    width:6em;
+    text-align:right;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ #itemLimit div{
+    text-align:center;
+ }
+ 
+ #limitContainer{
+   position: absolute;
+       width: 100%;
+ }
+ 
+/*
+
+*/
+
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+ 
+    .ft {
+        height:15px;
+        padding:0;
+    }
+
+   .yui-resize .yui-resize-handle-br {
+        right:0;
+        bottom:0;
+        height: 8px;
+        width: 8px;
+        position:absolute;
+    }
+/*
+.debugDomElement{
+        height: 8px;
+        width: 8px;
+        background-color:white;
+        z-index:1000;
+}
+*/

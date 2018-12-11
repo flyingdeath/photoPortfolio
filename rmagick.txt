@@ -1,0 +1,13 @@
+set PATH=C:\Program Files (x86)\ImageMagick-6.9.9-Q8;%PATH%
+
+set LIBRARY_PATH=C:\Program Files\ImageMagick-7.0.8-Q16\lib
+
+
+gem install rmagick -- '--with-opt-dir=C:\Program Files (x86)\ImageMagick-6.9.9-Q8'
+
+gem install rmagick --platform=ruby -- --with-opt-lib=C:/Program Files (x86)/ImageMagick-7.0.8-Q16/lib --with-opt-include=C:/Program Files (x86)/ImageMagick-7.0.8-Q16/include
+
+
+
+
+

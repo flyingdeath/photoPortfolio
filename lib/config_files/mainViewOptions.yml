@@ -1,0 +1,172 @@
+--- 
+- :label: Queue 
+  :children: 
+  - Disc
+  - Instant
+  :fn: this.mv.listQueue
+  :param: 
+    :mainViewId: queuePanel_mainView
+    :baseUrl: /flixrmi/cue/listQueue
+    :ParamKey: :QueueType
+    :instanceObj: this.mv
+    :loadingImageId: loading
+    :loadingReadyClassName: ready
+    :loadingloadingClassName: loading
+- :label: Options 
+  :children: 
+  - :label: Filter Envelop
+    :fn: this.mv.toggleSessionVar
+    :param: 
+      :instanceObj: this.mv
+      :fn: ListEnvelop_p
+      :param: 
+        :SessionKey: FilterEnvelop
+        :element: 
+          :baseUrl: /flixrmi/application/ListVarsUpdate
+          :debugOutputId: initialoutput
+          :loadingImageId: loading
+          :loadingReadyClassName: ready
+          :loadingloadingClassName: loading
+  - :label: Sort Envelop
+    :fn: this.mv.toggleSessionVar
+    :param: 
+      :fn: ListEnvelop_p
+      :instanceObj: this.mv
+      :param: 
+        :SessionKey: SortEnvelop
+        :element:
+          :baseUrl: /flixrmi/application/ListVarsUpdate
+          :debugOutputId: initialoutput
+          :loadingImageId: loading
+          :loadingReadyClassName: ready
+          :loadingloadingClassName: loading
+  - :label: View Envelop
+    :fn: this.mv.toggleSessionVar
+    :param: 
+      :instanceObj: this.mv
+      :fn: ViewEnvelop_p
+      :param: 
+        :SessionKey: ViewEnvelop
+        :element:
+          :baseUrl: /flixrmi/mainview/clientVarsUpdate
+          :debugOutputId: initialoutput
+  - :label: View Types
+    :children: 
+    - List
+    - Info List
+    - Hover List
+    - Thumbnails List
+    - Thumbnails Grid
+    - Thumbnails Header Grid
+    - Thumbnails Close Grid
+    :fn: this.mv.changeViewType
+    :param: 
+      :debugOutputId: initialoutput
+      :baseUrl: /flixrmi/mainview/viewTypeUpdate
+      :instanceObj: this.mv
+      :id: lookContainer
+  - :label: Clear Items
+    :fn: this.mv.clearItems
+    :param: 
+      :instanceObj: this.mv
+      :fn: ViewEnvelop_p
+      :param: 
+        :SessionKey: ViewEnvelop
+  - :label: Clear All Other Items
+    :fn: this.mv.clearItems
+    :param: 
+      :instanceObj: this.mv
+      :fn: ViewEnvelop_p
+      :param: 
+        :SessionKey: ViewEnvelop
+        :saveCurrent: true
+  - :label: Items Limit Dialog
+    :fn: this.mv.openLimitDialog
+    :param: 
+      :instanceObj: this.mv
+      :fn: ViewEnvelop_p
+      :param: 
+        :SessionKey: ViewEnvelop
+        :id: limitDialog
+- :label: Sort
+  :children: 
+  - :label: Name
+    :fn: this.mv.sortCategory
+    :param: 
+      :loadingloadingClassName: loading
+      :instanceObj: this.mv
+      :item: Name
+      :SessionKey: :Sort
+      :baseUrl: /flixrmi/application/listControl
+      :loadingImageId: loading
+      :loadingReadyClassName: ready
+  - :label: Year
+    :fn: this.mv.sortCategory
+    :param: 
+      :loadingloadingClassName: loading
+      :instanceObj: this.mv
+      :item: Year
+      :SessionKey: :Sort
+      :baseUrl:  /flixrmi/application/listControl
+      :loadingImageId: loading
+      :loadingReadyClassName: ready
+  - :label: Availability
+    :fn: this.mv.sortCategory
+    :param: 
+      :loadingloadingClassName: loading
+      :instanceObj: this.mv
+      :SessionKey: :Sort
+      :item: Availability
+      :baseUrl: /flixrmi/application/listControl
+      :loadingImageId: loading
+      :loadingReadyClassName: ready
+  - :label: Rating
+    :children: 
+    - Predicted
+    - Average
+    - User
+    :fn: this.mv.sortCategory
+    :param: 
+      :SessionKey: :Sort
+      :loadingloadingClassName: loading
+      :instanceObj: this.mv
+      :baseUrl:  /flixrmi/application/listControl
+      :loadingImageId: loading
+      :loadingReadyClassName: ready
+  :fn: this.mv.sortCategory
+  :param: 
+    :SessionKey: :Sort
+    :loadingloadingClassName: loading
+    :instanceObj: this.mv
+    :baseUrl:  /flixrmi/application/listControl
+    :instanceObj: this.mv
+    :loadingImageId: loading
+    :loadingReadyClassName: ready
+- :label: Limit
+  :children: 
+  - "25"
+  - "50"
+  - "100"
+  - "200"
+  - "400"
+  - "1000"
+  :fn: this.mv.LimitCategory
+  :param: 
+    :SessionKey: :limit
+    :instanceObj: this.mv
+    :baseUrl:  /flixrmi/application/listControl
+    :loadingImageId: loading
+    :loadingReadyClassName: ready
+    :loadingloadingClassName: loading
+- :label: Panels
+  :children: 
+  - :label: Cascade Panels
+    :fn: this.mv.panelCascade
+    :param: 
+      :instanceObj: this.mv
+      :param: 
+        :id: limitDialog
+
+  :fn: togglePanels
+  :param: 
+    :SessionKey: :OpenPanels

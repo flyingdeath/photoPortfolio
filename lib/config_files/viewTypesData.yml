@@ -1,0 +1,82 @@
+---
+:data:
+  :Info List:
+    :thumbView: 
+      :Thumb: ThumbNone
+      :ThumbHover: ThumbHoverLarge 
+    :dataContainer:
+      :DataPlacement: DataPlacementStatic
+    :ShownDataContainer:
+      :ShownData: ShownDataSome
+    :lookContainer:
+      :Look: LookList
+  :Thumbnails List: 
+    :thumbView: 
+      :Thumb: ThumbLarge
+      :ThumbHover: ThumbHoverLarge
+    :dataContainer:
+      :DataPlacement: DataPlacementStatic
+    :ShownDataContainer:
+      :ShownData: ShownDataThumb
+    :lookContainer:
+      :Look: LookList
+  :List:
+    :thumbView: 
+      :Thumb: ThumbNone
+      :ThumbHover: ThumbHoverLarge
+    :dataContainer:
+      :DataPlacement: DataPlacementStatic
+    :ShownDataContainer:
+      :ShownData: ShownDataName
+    :lookContainer:
+      :Look: LookList
+  :Hover List:
+    :thumbView: 
+      :Thumb: ThumbNone
+      :ThumbHover: ThumbHoverLarge
+    :dataContainer:
+      :DataPlacement: DataPlacementHover 
+    :ShownDataContainer:
+      :ShownData: ShownDataName
+    :lookContainer:
+      :Look: LookList
+  :Right Justfied List:
+    :thumbView: 
+      :Thumb: ThumbNone
+      :ThumbHover: ThumbHoverLarge
+    :dataContainer:
+      :DataPlacement: DataPlacementRightJustfied  
+    :ShownDataContainer:
+      :ShownData: ShownDataName
+    :lookContainer:
+      :Look: LookList
+  :Thumbnails Header Grid:
+    :thumbView: 
+      :Thumb: ThumbLarge
+      :ThumbHover: ThumbHoverLarge
+    :dataContainer:
+      :DataPlacement: DataPlacementHover  
+    :ShownDataContainer:
+      :ShownData: ShownDataLess 
+    :lookContainer:
+      :Look: LookGrid
+  :Thumbnails Grid:
+    :thumbView: 
+      :Thumb: ThumbLarge
+      :ThumbHover: ThumbHoverLarge
+    :dataContainer:
+      :DataPlacement: DataPlacementHover  
+    :ShownDataContainer:
+      :ShownData: ShownDataThumb  
+    :lookContainer:
+      :Look: LookGrid
+  :Thumbnails Close Grid:
+    :thumbView: 
+      :Thumb: ThumbLarge
+      :ThumbHover: ThumbHoverLarge
+    :dataContainer:
+      :DataPlacement: DataPlacementClose
+    :ShownDataContainer:
+      :ShownData: ShownDataThumb 
+    :lookContainer:
+      :Look: LookGrid

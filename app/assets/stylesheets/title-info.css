@@ -1,0 +1,77 @@
+.titleShowContainer {
+    height: 100%;
+}
+
+.titleShow_innerContainer .BoxArtLarge{
+  float: none;
+  display: inline-block;
+}
+
+.titleShow_innerContainer .EpsList{
+  float: right;
+}
+
+.titleShow_innerContainer .PeopleList{
+  display:inline-block;
+  float: none;
+  width: 300px;
+}
+
+.bio{ 
+  margin-left: auto;
+  margin-right: auto;
+  width: 544px;
+}
+
+.titleShow_innerContainer .synopsis{
+  float:none; 
+  display: inline-block; 
+  width: 300px;
+  vertical-align: top;
+}
+
+.movieStats{
+  display:inline-block;
+   vertical-align: top;
+}
+
+a.netflix_link:link {
+  color:#FFF;
+}    
+a.netflix_link:visited {
+  color:#FFF;
+} 
+a.netflix_link:hover {
+  color:#FFF;
+} 
+a.netflix_link:active {
+  color:#FFF;
+}  
+
+
+.titleShow_innerContainer .flimItemControlsContainer{
+  clear: none;
+  float: none;
+  display: inline-block; 
+   vertical-align: top;
+}
+
+
+.titleShow_innerContainer  .flimItemControls{
+  display:inline-block;
+  position:relative;
+}
+
+.movieStatsLists{
+  display:inline-block;
+   width: 300px;
+}
+
+.mpaa_ratings_list,
+.formats_list,
+.formats_tables,
+.genres_list{
+  list-style-type:none;
+  width:200px;
+  margin: 0px;
+}

@@ -1,0 +1,72 @@
+.scrollAutoContainer,
+.dialog,
+.infoBackground,
+.flimItemControls,
+.sliderContainer,
+.ThumbContainer,
+.yui-skin-sam .yui-tt .bd,
+#treeview_placeHolder,
+.pageSliderBackground,
+#noteDisplaylist li,
+#filterPanelContainer,
+#controlImages,
+#controlColors,
+#inlineInfoContainer,
+#logo,
+#inlineScroll,
+.titleShow_innerContainer,
+#btncontainer{
+ background-color:rgba(34,34,34,0.85);
+ border-radius: 10px;
+ /* 
+ -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+ filter:alpha(opacity=100);
+ opacity:1.0;
+ -moz-opacity:1.0;
+ 
+ background:url(../images/base_bg.png);
+ background:url(../images/base_bg.png);
+ */
+}
+
+.infoBackground,
+.sliderContainer,
+.yui-skin-sam .yui-tt .bd,
+.pageSliderBackground,
+.ThumbContainer{
+  padding-bottom: 2px;
+  padding-left: 12px;
+  padding-top: 2px;
+}
+
+.infoBackground{
+  display: inline-block;
+  position: relative;
+}
+
+#noteDisplaylist li{
+  margin:10px;
+  padding:5px;
+}
+
+.ToolTip{
+  position: absolute;
+  z-index:1000;
+  width: 572px;
+  visibility:hidden;
+}
+.ToolTip .infoBackground{
+ background-color:rgb(34,34,34);
+}
+.ttcontainer{
+  height:100%;
+}
+#inlineScroll{
+  padding:5px;
+}
+
+#logo,
+#inlineInfoContainer{
+  padding:5px;
+
+}

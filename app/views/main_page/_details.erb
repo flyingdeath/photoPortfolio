@@ -1,0 +1,19 @@
+<div class="infoBackground" id="<%=itemIndex%>_<%=@listType%>_styledBG">
+
+  <div id="<%=title[:display].gsub(  @asset_images, "") %>_<%=@listType%>_flimTitle" class="flimTitle"><%=title[:title]%></div>
+<div class="flimThumbExtraInfo">
+<div class="BoxArtLarge"  id="<%=itemIndex%>_<%=@listType%>_BoxArt"><img class="BoxArtImage" src="<%= title[:thumb]  %>"/></div>
+
+  <div id="title_<%= title[:display].gsub(  @asset_images, "") %>_<%=@listType%>_ExtendedData" class="ExtendedData"></div>
+  <div class="ExtendedDataLoading"><div class="ready" id="<%=itemIndex%>_<%=@listType%>_ExtendedDataLoading"></div></div>
+
+  
+  <div class="flimExtraInfo">
+  </div>
+</div>
+
+<%=  render :partial => "flimItemControls", 
+            :locals =>{:itemIndex => itemIndex, :title => title}  %>
+
+                        
+</div>
