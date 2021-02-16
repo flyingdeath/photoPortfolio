@@ -3,7 +3,7 @@
 }
   .ratingBtnPredicted{
     height:19px;
-    background-image:url(rating_star_Predicted.png);
+    background-image:url(/rating_star_Predicted.png);
   }
   
   .ratingBtnRated,
@@ -19,7 +19,7 @@
   }
   
   .ratingBtnUnrated{
-    background-image:url(rating_dot.png);
+    background-image:url(/rating_dot.png);
     display:none;
   
   }
@@ -28,11 +28,11 @@
   }
   
   div.ratingBtn:hover{
-    background-image:url(rating_dot.png);
+    background-image:url(/rating_dot.png);
   }
   
   .getAllIcon{
-    background-image:url(rating_dot.png);
+    background-image:url(/rating_dot.png);
     width:19px;
     height:19px;
     position: absolute;
@@ -123,57 +123,57 @@
   
   
   .control-btn .play{
-    background-image:url(icons.png);
+    background-image:url(/icons.png);
     background-position: 18px -63px;
     width:20px;
     height:20px;
   }
   .control-btn .add_instant_queue{
-    background-image:url(icons.png);
+    background-image:url(/icons.png);
     background-position: 0px -133px;
     width:20px;
     height:20px;
   }
   .control-btn .save_disc_queue{
-    background-image:url(icons.png);
+    background-image:url(/icons.png);
     background-position: 0px -21px;
     width:20px;
     height:20px;
   }
   .control-btn .add_disc_queue{
-    background-image:url(icons.png);
+    background-image:url(/icons.png);
     background-position: -19px -133px;
     width:20px;
     height:20px;
   }
   .control-btn .delete{
-    background-image:url(icons.png);
+    background-image:url(/icons.png);
     background-position: -19px -153px;
     width:20px;
     height:20px;
   }
   
   .control-btn .undoDelete{
-    background-image:url(icons.png);
+    background-image:url(/icons.png);
     background-position: -19px -177px;
     width:20px;
     height:20px;
   }
   
   .control-btn .moveToTop{
-    background-image:url(icons.png);
+    background-image:url(/icons.png);
     background-position: 0px -177px;
     width:20px;
     height:20px;
   }
   .control-btn .in_disc_queue{
-    background-image:url(icons.png);
+    background-image:url(/icons.png);
     background-position: -19px -204px;
     width:20px;
     height:20px;
   }
   .control-btn .in_instant_queue{
-    background-image:url(icons.png);
+    background-image:url(/icons.png);
     background-position: 0px -204px;
     width:20px;
     height:20px;
@@ -186,21 +186,21 @@
   
   div.control-btn:hover .not_interested_clear,
   .control-btn .not_interested{
-    background-image:url(icons.png);
+    background-image:url(/icons.png);
     background-position: -3px -231px;
     width:20px;
     height:20px;
   }
   
   .control-btn .no_opinion{
-    background-image:url(icons.png);
+    background-image:url(/icons.png);
     background-position: 0px 0px;
     width:20px;
     height:20px;
   }
   
   .pageMarkerIcon{
-    background-image:url(icons.png);
+    background-image:url(/icons.png);
     background-position: 0px 0px;
     width:20px;
     height:20px;

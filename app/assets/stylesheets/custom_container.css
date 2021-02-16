@@ -109,7 +109,7 @@ margin:0 -1px;
 border-bottom:solid 1px #ccc;
 }
 .yui-skin-sam .yui-panel .bd{
-  background:url("base_sand_bg_opacity_dot70.png") repeat scroll 0 0 transparent;
+  background:url(/base_sand_bg_opacity_dot70.png) repeat scroll 0 0 transparent;
 }
 .yui-skin-sam .yui-panel .ft{
   background-color:#F2F2F2;
@@ -126,7 +126,7 @@ line-height:2;
 *line-height:1.9;
 font-weight:bold;
 color:#DDD;
-background:url(container_tm.png) repeat-x 0 0;
+background:url(/container_tm.png) repeat-x 0 0;
 margin-left:4px;
 margin-right:4px;
 text-align:center;
@@ -144,7 +144,7 @@ overflow:visible;
   height:24px;
   top:0;
   left:-1px;
-  background:url(container_tl.png) no-repeat;
+  background:url(/container_tl.png) no-repeat;
   position:absolute;
   border-bottom: 1px solid #CCCCCC;
 }

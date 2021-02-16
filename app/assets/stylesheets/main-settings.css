@@ -204,7 +204,7 @@ a:visited{
   display:inline-block;
   width:20px;
   height:20px;
-  background-image:url(icons.png);
+  background-image:url(/icons.png);
   background-position: -22px -112px;
 }
 
@@ -286,7 +286,7 @@ li#ScrollAtuoStop:hover .scrollAutoContainer{
  
 
 .yui-skin-sam .yui-h-slider{
-  background: url(Silder_assets/bg-h-l.gif) 0px 0;
+  background: url(/Silder_assets/bg-h-l.gif) 0px 0;
   z-index: 1;
   position:relative;
 }
@@ -298,7 +298,7 @@ li#ScrollAtuoStop:hover .scrollAutoContainer{
 
 .ThumbIconMax,
 .ThumbIcon{
- background-image:url(icons.png);
+ background-image:url(/icons.png);
   background-position: 0px 0px;
   background-repeat:no-repeat;
   width: 20px;
@@ -328,7 +328,7 @@ div.ThumbIcon:hover .ThumbContainer{
 } 
 
 .yui-skin-sam .yui-v-slider{
-  background: url(Silder_assets/bg-v-c.gif) 12px 0;
+  background: url(/Silder_assets/bg-v-c.gif) 12px 0;
   height:500px;
   z-index: 1;
   position:relative;
@@ -338,7 +338,7 @@ div.ThumbIcon:hover .ThumbContainer{
 
 .pageSliderIconMax,
 .pageSliderIcon{
-  background-image:url(new_page_small.png);
+  background-image:url(/new_page_small.png);
  /*  background-position: 0px -251px;*/
   background-repeat:no-repeat;
   width: 20px;
@@ -545,7 +545,7 @@ div.tvSidePanel_toggle~#background_mainContainer{
 
 #noteEntryToggle,
 #doneToggle{
-  background-image:url(icons.png);
+  background-image:url(/icons.png);
   width:20px;
   height:20px;
   display:inline-block;
@@ -605,7 +605,7 @@ a.tvLink:active {
 
 
 .errorClear{
-  background-image:url(icons.png); 
+  background-image:url(/icons.png); 
   background-position: -9px -383px;
   height: 25px;
   width: 25px;
@@ -624,7 +624,7 @@ a.tvLink:active {
 }
 
 #loadicon{
-   background-image: url("animated.ajax.loader.gif");
+   background-image: url(/animated.ajax.loader.gif);
    background-position: -1px -1px;
    margin-left: -48px;
    height: 48px;
