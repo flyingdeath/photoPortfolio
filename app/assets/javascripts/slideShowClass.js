@@ -51,13 +51,13 @@ function slideShowClass(options){
 
 
     }
-	if(!this.IntOnly){
+  if(!this.IntOnly){
 
-		if(this.orderSet){
-		  this.timedRunShow_c(this.element)();
-		}else{
-		  this.timedRunShow(this.element);
-		}
+    if(this.orderSet){
+      this.timedRunShow_c(this.element)();
+    }else{
+      this.timedRunShow(this.element);
+    }
     }
 
   }
@@ -68,18 +68,18 @@ function slideShowClass(options){
 
  slideShowClass.prototype.hideControls_p = function(element,eventObj){
   if(eventObj){
-	   var node = YAHOO.util.Event.getTarget(eventObj);
-	   var h = new helperClass();
-	   if(node.id == this.btnContainer && -1 == ['pausebtn','previousbtn','nextbtn','stopbtn'].indexOf(eventObj.explicitOriginalTarget.id) ){
-		 /**/
-		 h.fadeAnimation({run: true, seconds: 2.0, obj: this.btnContainer, start:1.0, finish: 0.0, onStart: function(){
-			 YAHOO.util.Dom.setStyle(this.btnContainer,"opacity",1.0);
-		  }});
-				// h.hide(this.btnContainer,'v');
-	   }
-	   this.h.deleteDomElement(node);
-	   node = null;
-  	}
+     var node = YAHOO.util.Event.getTarget(eventObj);
+     var h = new helperClass();
+     if(node.id == this.btnContainer && -1 == ['pausebtn','previousbtn','nextbtn','stopbtn'].indexOf(eventObj.explicitOriginalTarget.id) ){
+     /**/
+     h.fadeAnimation({run: true, seconds: 2.0, obj: this.btnContainer, start:1.0, finish: 0.0, onStart: function(){
+       YAHOO.util.Dom.setStyle(this.btnContainer,"opacity",1.0);
+      }});
+        // h.hide(this.btnContainer,'v');
+     }
+     this.h.deleteDomElement(node);
+     node = null;
+    }
  }
 
 
@@ -92,13 +92,13 @@ function slideShowClass(options){
    var node = YAHOO.util.Event.getTarget(eventObj);
 
    if(node.id == this.btnContainer && -1 == ['pausebtn','previousbtn','nextbtn','stopbtn'].indexOf(eventObj.explicitOriginalTarget.id) ){
-			// h.show(this.btnContainer,'v');
+      // h.show(this.btnContainer,'v');
 
-	if( 0 == parseInt(YAHOO.util.Dom.getStyle(this.btnContainer,"opacity"))){
-		   h.fadeAnimation({run: true, seconds: 2.0, obj:this.btnContainer, start:0.0, finish: 1.0, onStart: function(){
-			 YAHOO.util.Dom.setStyle(this.btnContainer,"opacity",0.0);
-		  }});
-		}/**/
+  if( 0 == parseInt(YAHOO.util.Dom.getStyle(this.btnContainer,"opacity"))){
+       h.fadeAnimation({run: true, seconds: 2.0, obj:this.btnContainer, start:0.0, finish: 1.0, onStart: function(){
+       YAHOO.util.Dom.setStyle(this.btnContainer,"opacity",0.0);
+      }});
+    }/**/
     }
    this.h.deleteDomElement(node);
    node = null;
@@ -110,6 +110,8 @@ function slideShowClass(options){
     }else{
       element.interval = this.interval*1000;
     }
+    
+    
     if(element.bit){
       if(this.orderSet){
        element.timer = setTimeout(this.timedRunShow_c(this.element),element.interval);
@@ -117,9 +119,32 @@ function slideShowClass(options){
        element.timer = setTimeout(this.timedRunShow_objects_c(element),element.interval);
       }
     }
+    
+    
+    if( (element.n+2) >= element.set.length){
+      clearTimeout(element.timer);
+      this.mv.endlessScroll_p("categoryPanel_scrollContainer",{
+          baseUrl: "/main_page/listPagination",
+          loadingImageId: "loading",
+          loadingloadingClassName: "loading",
+          loadingReadyClassName: "ready",
+          actionKey: "pagination",
+          SessionKey: "listAction",
+          pageValue: "pageForward",
+          surfix: "_subContainer",
+          pageKey: "page",
+          pageScrollFlag: true
+        });
+    }
+    
     if( (element.n+1) >= element.set.length){
       if(this.orderSet){
         element.n = 0;
+        
+       // element.n++;
+                
+    
+    
       }else{
         element.n++;
       }
@@ -129,23 +154,23 @@ function slideShowClass(options){
   }
 
  slideShowClass.prototype.changeIndex_core = function(startingImage){
- 	return this.element.set.indexOf(startingImage);
+  return this.element.set.indexOf(startingImage);
 
  }
  slideShowClass.prototype.changeIndex = function(startingImage){
- 	this.element.bit = 0;
- 	this.n = this.changeIndex_core(startingImage);
-	h.show("page");
+  this.element.bit = 0;
+  this.n = this.changeIndex_core(startingImage);
+  h.show("page");
     this.fillImage(this.element.canvasObj,this.imagePrefix+this.element.set[this.element.n]);
  }
 
  slideShowClass.prototype.startShow = function(startingImage){
     var h = new helperClass();
- 	this.element.n = this.changeIndex_core(startingImage) ;
+  this.element.n = this.changeIndex_core(startingImage) ;
     this.changeImageSrc(this.pbtnId,this.playBtnImage);
- 	this.element.bit = 0;
-	YAHOO.util.Dom.setStyle("container","z-index",3);
-	h.show("page");
+  this.element.bit = 0;
+  YAHOO.util.Dom.setStyle("container","z-index",3);
+  h.show("page");
     h.updateHTML(this.indexId, parseInt(this.element.n +1) +"/"+this.element.set.length + " "+this.element.title )
     this.fillImage(this.element.canvasObj,this.imagePrefix+this.element.set[this.element.n]);
     //this.timedRunShow_c(this.element)();
@@ -154,16 +179,16 @@ function slideShowClass(options){
 
  slideShowClass.prototype.showPage = function(){
     var h = new helperClass();
- 	if(this.fade){
-		h.fadeAnimation({run: true, seconds: 5.0, obj:"page", start:0.0, finish: 1.0,
-	                          onStart: function(){
-	                       				YAHOO.util.Dom.setStyle("page","opacity",parseInt(0));
-	                       				h.show("page");
-                		}});
- 	}else{
-		h.show("page");
+  if(this.fade){
+    h.fadeAnimation({run: true, seconds: 5.0, obj:"page", start:0.0, finish: 1.0,
+                            onStart: function(){
+                                YAHOO.util.Dom.setStyle("page","opacity",parseInt(0));
+                                h.show("page");
+                    }});
+  }else{
+    h.show("page");
 
- 	}
+  }
 
  }
   slideShowClass.prototype.nextShow = function(eventOBj, paramSet){
@@ -172,13 +197,13 @@ function slideShowClass(options){
 
  slideShowClass.prototype.next_p = function(){
     var h = new helperClass();
- 	this.element.bit = 0;
+  this.element.bit = 0;
     if( (this.element.n+1) >= this.element.set.length){
         this.element.n = 0;
     }else{
       this.element.n++;
     }
-	h.show("page");
+  h.show("page");
     h.updateHTML(this.indexId, parseInt(this.element.n +1) +"/"+this.element.set.length + " "+this.element.title )
     this.fillImage(this.element.canvasObj,this.imagePrefix+this.element.set[this.element.n]);
  }
@@ -188,14 +213,14 @@ function slideShowClass(options){
   }
  slideShowClass.prototype.previous_p = function(){
     var h = new helperClass();
- 	this.element.bit = 0;
+  this.element.bit = 0;
 
     if( (this.element.n-1) <= 0){
         this.element.n = this.element.set.length -1;
     }else{
         this.element.n--;
     }
-	h.show("page");
+  h.show("page");
     h.updateHTML(this.indexId, parseInt(this.element.n +1) +"/"+this.element.set.length + " "+this.element.title )
     this.fillImage(this.element.canvasObj,this.imagePrefix+this.element.set[this.element.n]);
  }
@@ -206,11 +231,12 @@ function slideShowClass(options){
 
  slideShowClass.prototype.stopShow_p = function(element){
     var h = new helperClass();
- 	this.element.bit = 0;
-	h.hide("page");
+  this.element.bit = 0;
+  h.hide("page");
  }
  slideShowClass.prototype.updateOrderSet = function(newSet){
-		this.element.set = newSet;
+    this.element.set = newSet;
+    this.timedRunShow(this.element);
  }
 
 
@@ -289,7 +315,7 @@ function slideShowClass(options){
        this.changeImageSrc(this.pbtnId,this.playBtnImage);
        clearTimeout(element.timer)
      }else{
-     	this.hideControls_p(element);
+      this.hideControls_p(element);
        element.bit = 1;
        if(this.orderSet){
          this.fillImage(element.canvasObj,this.imagePrefix+element.set[element.n]);
