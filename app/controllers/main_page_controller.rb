@@ -305,7 +305,7 @@ class MainPageController < ApplicationController
     directorysList = []
     
     Dir.foreach(directory) {|x|
-      if x == '.' or  x == '..' or x == 'thumb'  or x == 'yui' or x == 'wallpapers' or ["404.html","422.html","500.html","favicon.ico","robots.txt", "animated.ajax.loader.gif",
+      if x == '.' or  x == '..' or x == 'thumb'  or x == 'yui' or x == 'wallpapers' or ["assets","404.html","422.html","500.html","favicon.ico","robots.txt", "animated.ajax.loader.gif",
  "base_sand_bg_opacity_dot70.png",
  "check",
  "container_tl.png",
