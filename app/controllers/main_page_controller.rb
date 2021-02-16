@@ -8,6 +8,7 @@ require 'fileutils'
 require "activeDummy"
 
 require 'will_paginate/array'
+#require 'mime/types'
 
 class MainPageController < ApplicationController
 
@@ -370,7 +371,7 @@ class MainPageController < ApplicationController
   end
   def clientVarsUpdate()
      clientVarsUpdate_core()
-     render :nothing => true
+    render body: nil
   end  
   
      
@@ -394,11 +395,11 @@ class MainPageController < ApplicationController
     walk_tree(@@cache_images)
     # @precompilestrList = "Rails.application.config.assets.precompile += ["  + walk_tree_precompile(@@asset_images) + "]"
     
-    render :text => 'complete' #@precompilestrList  
+    render plain: 'complete' #@precompilestrList  
   end   
       def movetocache()
          walk_treeMoveToCache(@@asset_images)
-         render :text => "done."
+         render plain: "done."
       end 
   
   private 
