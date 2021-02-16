@@ -61,8 +61,12 @@ function delegateListClass(options){
       this.scrollObj.stopAutoScroll();
 
       if('play' == className){
-      	this.slideShow.startShow(node.parentNode.id.replace("_categoryPanel_play",''))
+        this.slideShow.startShow(node.parentNode.id.replace("_categoryPanel_play",''))
       }
+      if('BoxArtImage' == className){
+      
+        this.slideShow.startShow(node.parentNode.parentNode.parentNode.parentNode.id.replace("_categoryPanel_flimInfo",'').replace("title_",''))
+      }  
 
         if(!eventHit && node.id.indexOf(this.btnSet.tagSurfix) !== -1){
           id = node.name.replace("_categoryPanel_tag" ,'');
