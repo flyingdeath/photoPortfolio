@@ -430,7 +430,7 @@ div.pageSliderIcon:hover .pageSliderBackground{
 }
 
 .toggleTab{         
-    background-image: url("icons.png");
+    background-image: url(/icons.png);
     background-position: -22px -112px;
     display: none;
     height: 20px;
