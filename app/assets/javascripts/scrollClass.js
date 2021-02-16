@@ -389,6 +389,7 @@
             if((parseInt(results.details.start_index) +
                 parseInt(results.details.results_per_page)) >=
                 parseInt(results.details.number_of_results)){
+            this.resultDetails = results.details;
                   this.setElementFinished(element.paramSet.conatinerId, true);
             }
           }

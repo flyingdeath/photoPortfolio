@@ -205,7 +205,7 @@
   }
 
   mainViewClass.prototype.tvOrderDialog = function(eventObj, paramSet){
-  	paramSet.instanceObj.tvOrderDialogShow();
+    paramSet.instanceObj.tvOrderDialogShow();
   }
 
 mainViewClass.prototype.tvOrderDialogShow = function(){
@@ -348,7 +348,9 @@ mainViewClass.prototype.tvOrderDialogShow = function(){
   }
 
   mainViewClass.prototype.endlessScroll_p = function(id, paramSet){
-    paramSet.params = {};
+    if(!paramSet.params){
+      paramSet.params = {};
+    }
     paramSet.conatinerId = id;
     var prefix = new helperClass().getPrefix(id);
     paramSet.mainViewId = prefix + paramSet.surfix;
@@ -539,37 +541,37 @@ mainViewClass.prototype.tvOrderDialogShow = function(){
     this.setLoadingFlag(element);
     this.panelsObj.updatePanel(results,  element, o);
     this.scrollObj.setControlFlags(element, results);
-	var flimitems = YAHOO.util.Dom.getElementsByClassName('flimItem');
-	var BoxArtImages = YAHOO.util.Dom.getElementsByClassName('BoxArtImage');
-	var flimTitle = YAHOO.util.Dom.getElementsByClassName('flimTitle');
-	var count  =  flimitems.length;
-	var list = [];
-	try{
-		for(var i = 0;i< count;i++){
-		  list = list.concat(flimitems[i].id.replace('title_','').replace('_categoryPanel_flim',''));
-		  if(BoxArtImages[i]){
-			if(YAHOO.util.Dom.getStyle(flimitems[i].id, 'width') !== BoxArtImages[i].naturalWidth +"px"){
-			this.widthSet[flimitems[i].id] = true;
-			YAHOO.util.Dom.setStyle(flimitems[i].id, 'width', BoxArtImages[i].naturalWidth +"px");
-			YAHOO.util.Dom.setStyle(flimTitle[i].id, 'width', BoxArtImages[i].naturalWidth +"px");
+  var flimitems = YAHOO.util.Dom.getElementsByClassName('flimItem');
+  var BoxArtImages = YAHOO.util.Dom.getElementsByClassName('BoxArtImage');
+  var flimTitle = YAHOO.util.Dom.getElementsByClassName('flimTitle');
+  var count  =  flimitems.length;
+  var list = [];
+  try{
+    for(var i = 0;i< count;i++){
+      list = list.concat(flimitems[i].id.replace('title_','').replace('_categoryPanel_flim',''));
+      if(BoxArtImages[i]){
+      if(YAHOO.util.Dom.getStyle(flimitems[i].id, 'width') !== BoxArtImages[i].naturalWidth +"px"){
+      this.widthSet[flimitems[i].id] = true;
+      YAHOO.util.Dom.setStyle(flimitems[i].id, 'width', BoxArtImages[i].naturalWidth +"px");
+      YAHOO.util.Dom.setStyle(flimTitle[i].id, 'width', BoxArtImages[i].naturalWidth +"px");
 
 
-			YAHOO.util.Event.addListener(BoxArtImages[i], 'load',  function(eventOBj, paramSet) {
-				YAHOO.util.Dom.setStyle(paramSet.id, 'width', paramSet.boxartImage.naturalWidth +"px");
-				YAHOO.util.Dom.setStyle(paramSet.idTitle, 'width', paramSet.boxartImage.naturalWidth +"px");
-				paramSet.mv.h.deleteDomElement(paramSet.boxartImage);
-				domRef = null;
-			} , {id:flimitems[i].id, idTitle:flimTitle[i].id,  boxartImage: BoxArtImages[i], mv: this });
+      YAHOO.util.Event.addListener(BoxArtImages[i], 'load',  function(eventOBj, paramSet) {
+        YAHOO.util.Dom.setStyle(paramSet.id, 'width', paramSet.boxartImage.naturalWidth +"px");
+        YAHOO.util.Dom.setStyle(paramSet.idTitle, 'width', paramSet.boxartImage.naturalWidth +"px");
+        paramSet.mv.h.deleteDomElement(paramSet.boxartImage);
+        domRef = null;
+      } , {id:flimitems[i].id, idTitle:flimTitle[i].id,  boxartImage: BoxArtImages[i], mv: this });
 
-			}
-		  }
-		}
-	}catch(err){
-		debugger;
-	}
-	this.slideShow.updateOrderSet(list);
+      }
+      }
+    }
+  }catch(err){
+    debugger;
+  }
+  this.slideShow.updateOrderSet(list);
 
-	flimitems = null;
+  flimitems = null;
     BoxArtImages = null;
 
 

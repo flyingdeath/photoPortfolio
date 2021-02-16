@@ -121,22 +121,6 @@ function slideShowClass(options){
     }
     
     
-    if( (element.n+2) >= element.set.length){
-      clearTimeout(element.timer);
-      this.mv.endlessScroll_p("categoryPanel_scrollContainer",{
-          baseUrl: "/main_page/listPagination",
-          loadingImageId: "loading",
-          loadingloadingClassName: "loading",
-          loadingReadyClassName: "ready",
-          actionKey: "pagination",
-          SessionKey: "listAction",
-          pageValue: "pageForward",
-          surfix: "_subContainer",
-          pageKey: "page",
-          pageScrollFlag: true
-        });
-    }
-    
     if( (element.n+1) >= element.set.length){
       if(this.orderSet){
         element.n = 0;

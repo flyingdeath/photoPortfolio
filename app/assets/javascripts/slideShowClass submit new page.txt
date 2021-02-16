@@ -1,0 +1,21 @@
+
+    
+    if( (element.n+2) >= element.set.length){
+      clearTimeout(element.timer);
+      var pageIndex = parseInt(this.scrollObj.resultDetails.start_index)++;
+      
+      
+      this.mv.endlessScroll_p("categoryPanel_scrollContainer",{
+          baseUrl: "/main_page/listPagination",
+          loadingImageId: "loading",
+          loadingloadingClassName: "loading",
+          loadingReadyClassName: "ready",
+          actionKey: "pagination",
+          SessionKey: "listAction",
+          pageValue: "pageForward",
+          params: {page:pageIndex},
+          surfix: "_subContainer",
+          pageKey: "page",
+          pageScrollFlag: true
+        });
+    }
