@@ -249,7 +249,11 @@ class MainPageController < ApplicationController
      
   def listPagination()
     session[:index] = params[:page].to_i
-    viewAllDirectoyPublic_core() 
+   if session[:current_list_mode] == "all"
+    viewAllDirectoyPublic_core()  
+   elsif session[:current_list_mode] == "directory"
+    viewDirectoyPublic_core()
+   end
     renderTitles(session[:categoryViewType],false, "Loop")
   
   end
@@ -263,6 +267,7 @@ class MainPageController < ApplicationController
     @@titles = []
     
     viewAllDirectoy(@@asset_images)
+   session[:current_list_mode] = "all"
 
     
     session[:per_page] = 50
@@ -401,19 +406,47 @@ class MainPageController < ApplicationController
   
   
   def viewDirectoy()
+    viewDirectoyPublic_core()
+    renderTitles(session[:categoryViewType])
+  end
+  def viewDirectoyPublic_core()
     @@titles = []
-    directory =    (File::join @@asset_images, params[:id])
+    if params[:id]
+      current_directory =  params[:id]
+      session[:index] = 0
+    elsif session[:current_directory]
+      current_directory =  session[:current_directory]
+    end 
+    
+    directory =    (File::join @@asset_images,current_directory)
     viewDirectoy_core(directory)
-    @titles = @@titles
+   # @titles = @@titles
+   total_length = @@titles.length
+   session[:current_list_mode] = "directory"
+    session[:current_directory] = current_directory   
+    session[:per_page] = 50
+    
+    if !session[:index]
+      session[:index] = 1
+    else
+      session[:index] += 1
+      if (session[:index]*session[:per_page]) > (@@titles.length+ session[:per_page])
+        session[:index] = 1
+      end
+    end 
+    @@logger.info(session[:index].to_s + " | " + session[:per_page].to_s)
+    @titles =  @@titles.paginate(:page =>  session[:index], :per_page => session[:per_page])
+   
     @taglist =  unfreezeArray(Rails.cache.fetch("taglist"){ []})
     @listType = "categoryPanel"
      @asset_images  = @@asset_images
      @titlesData = ActiveDummySet.new
      @titlesData.details = ActiveDummy.new
-     @titlesData.details.attributes = {:start_index => 0, 
-                                        :results_per_page => @titles.length, 
-                                        :number_of_results => @titles.length} 
-    renderTitles(session[:categoryViewType])
+     
+     @titlesData.details.attributes = {:start_index => (session[:index]*session[:per_page] - session[:per_page]  ) , 
+                                        :current_page => session[:index],
+                                        :results_per_page => session[:per_page], 
+                                        :number_of_results => total_length} 
   end
   def viewDirectoy_core(directory)
     
