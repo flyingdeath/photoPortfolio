@@ -232,7 +232,8 @@ class MainPageController < ApplicationController
    
    @titlesData = ActiveDummySet.new
    @titlesData.details = ActiveDummy.new
-   @titlesData.details.attributes = {:start_index => 0, 
+   @titlesData.details.attributes = {:start_index => 0,
+                                     :current_page => 0,
                                      :results_per_page => list.length, 
                                      :number_of_results => list.length} 
    @listType = 'categoryPanel'
