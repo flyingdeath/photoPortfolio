@@ -409,7 +409,7 @@ div.pageSliderIcon:hover .pageSliderBackground{
 }
 
 .loading{
-  display:block;
+  display:inline-block;
 }
 .ready, 
 .loading {
