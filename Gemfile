@@ -49,4 +49,4 @@ gem 'exifr'
 
 gem 'will_paginate'
 gem 'mime-types'
-gem 'bootsnap'
+gem 'devise'

@@ -19,9 +19,9 @@ default: &default
   timeout: 5000
 development:
   adapter: postgresql
-  database: db/development
-  username: AJames # replace this with your own user name
-  password: secret # replace this with your own password
+  database: photoportfoliodb
+  username: postgres # replace this with your own user name
+  password: Faster # replace this with your own password
   host: localhost
   encoding: UTF8
   pool: 5

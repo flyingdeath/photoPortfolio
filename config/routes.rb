@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   root 'main_page#index'
   get 'main_page/index' => 'main_page#index'
   get 'main_page/listCategory' => 'main_page#viewDirectoy'
