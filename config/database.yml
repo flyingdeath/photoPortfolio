@@ -37,5 +37,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: photoportfoliodb
+  username: postgres # replace this with your own user name
+  password: <%= ENV["some_text"] %> # replace this with your own password
+  host: <%= ENV["SOME_OTHER_URL"] %>
+  encoding: UTF8
+  pool: 5
+  timeout: 5000
