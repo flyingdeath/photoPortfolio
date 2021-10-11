@@ -29,7 +29,7 @@ hoverConnector:
   readyClass: ready
   thumbClass: BoxArtImage
   dataContainerClass: ExtendedData
-  delay: 500
+  delay: 1500
   dataDelay: 1
   autodismissdelay: 500
   ancestorClassNameList: 
